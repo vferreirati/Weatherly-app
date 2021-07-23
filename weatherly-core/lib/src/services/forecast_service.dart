@@ -1,8 +1,7 @@
-import 'package:weatherly_core/src/DTOs/forecast_response_dto.dart';
-import 'package:weatherly_core/src/extensions/forecast_dto_mapping.dart';
-import 'package:weatherly_core/src/models/forecast.dart';
-import 'package:weatherly_core/src/network/api_endpoints.dart';
-import 'package:weatherly_core/src/network/netclient.dart';
+import '../dtos.dart';
+import '../extensions.dart';
+import '../models.dart';
+import '../network.dart';
 
 /// Service responsible for retrieving `Forecast` related data.
 class ForecastService {

@@ -1,4 +1,4 @@
-import 'package:weatherly_core/src/DTOs/forecast_dto.dart';
+import '../dtos.dart';
 
 /// Represents the response JSON object when retrieving
 /// the weather forecast from the API.

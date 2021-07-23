@@ -2,8 +2,9 @@ import 'dart:collection';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:weatherly_core/src/models/forecast.dart';
-import 'package:weatherly_core/src/services/forecast_service.dart';
+
+import '../../models.dart';
+import '../../services.dart';
 
 /// Cubit responsible for retrieving `Forecast` information.
 class ForecastCubit extends Cubit<ForecastState> {

@@ -1,6 +1,6 @@
-import 'package:weatherly_core/src/DTOs/forecast_dto.dart';
-import 'package:weatherly_core/src/models/forecast.dart';
-import 'package:weatherly_core/src/network/api_endpoints.dart';
+import '../dtos.dart';
+import '../models.dart';
+import '../network.dart';
 
 /// Provides DTO mapping functionality.
 extension ForecastDTOMapping on ForecastDto {
