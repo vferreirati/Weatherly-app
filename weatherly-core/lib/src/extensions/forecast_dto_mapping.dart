@@ -15,7 +15,7 @@ extension ForecastDTOMapping on ForecastDto {
       forecastDescription: weatherStateName,
       forecastIconURL:
           '${APIEndpoints.forecastSvgBaseUrl}/$weatherStateAbbr.svg',
-      forecastDate: DateTime.now(), // TODO: Implement this.
+      forecastDate: DateTime.tryParse(applicableDate ?? ''),
     );
   }
 }
