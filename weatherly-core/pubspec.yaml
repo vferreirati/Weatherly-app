@@ -1,0 +1,16 @@
+name: weatherly_core
+description: Weatherly Core
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  bloc: ^7.0.0
+  dio: ^4.0.0
+  equatable: ^2.0.3
+
+dev_dependencies:
+  flutter_lints: ^1.0.4
