@@ -11,6 +11,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  weatherly_core:
+    path: ../weatherly-core
   
 
 dev_dependencies:
