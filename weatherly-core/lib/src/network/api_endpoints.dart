@@ -6,7 +6,7 @@ class APIEndpoints {
   static const String baseUrl = 'https://www.metaweather.com';
 
   /// Location endpoint.
-  static const String location = '$baseUrl/api/location';
+  static const String location = '/api/location';
 
   /// Forecast icon base URL.
   static const String forecastSvgBaseUrl = '$baseUrl/static/img/weather';
