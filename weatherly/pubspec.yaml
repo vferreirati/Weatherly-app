@@ -11,6 +11,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_bloc: ^7.0.1
+  flutter_svg: ^0.22.0
+  intl: ^0.17.0
   weatherly_core:
     path: ../weatherly-core
   
@@ -18,7 +21,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lint: ^1.0.0  
+  flutter_lints: ^1.0.4
     
 flutter:
   uses-material-design: true
