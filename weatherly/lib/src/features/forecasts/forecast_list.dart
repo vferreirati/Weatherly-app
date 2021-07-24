@@ -12,9 +12,13 @@ class ForecastList extends StatelessWidget {
   /// List of forecasts to be displayed.
   final List<Forecast> forecasts;
 
+  /// The name of the location associated with the forecasts.
+  final String locationName;
+
   /// Creates a new `ForecastList` instance.
   const ForecastList({
     Key? key,
+    required this.locationName,
     this.forecasts = const [],
   }) : super(key: key);
 
@@ -26,7 +30,7 @@ class ForecastList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'London',
+            locationName,
             style: Theme.of(context).textTheme.headline5,
           ),
           Expanded(
