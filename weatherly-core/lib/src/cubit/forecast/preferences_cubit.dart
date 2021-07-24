@@ -16,7 +16,7 @@ class PreferencesCubit extends Cubit<PreferencesState> {
     required this.storage,
   }) : super(
           PreferencesState(
-            selectedLocation: Location(
+            selectedLocation: const Location(
               id: 44418,
               name: 'London',
             ),
@@ -74,6 +74,7 @@ class PreferencesCubit extends Cubit<PreferencesState> {
     }
   }
 
+  /// Updates the location and retrieves the forecast for it.
   void setLocation(Location location) async {
     await storage.setInt(
       key: 'selected_location',

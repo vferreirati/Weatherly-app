@@ -11,6 +11,7 @@ late _MockForecastService _service;
 
 const _loadForecastId = 100;
 const _throwsExceptionId = 200;
+const _changedLocationId = 300;
 
 void main() {
   final mockedForecasts = List.generate(
@@ -32,6 +33,12 @@ void main() {
 
     when(
       () => _service.list(locationId: _loadForecastId),
+    ).thenAnswer(
+      (_) async => mockedForecasts,
+    );
+
+    when(
+      () => _service.list(locationId: _changedLocationId),
     ).thenAnswer(
       (_) async => mockedForecasts,
     );
@@ -100,6 +107,34 @@ void main() {
     ],
     verify: (c) => verify(
       () => _service.list(locationId: _throwsExceptionId),
+    ).called(1),
+  );
+
+  blocTest<ForecastCubit, ForecastState>(
+    'Changes the location ID successfully',
+    build: () => ForecastCubit(
+      locationId: _loadForecastId,
+      forecastService: _service,
+    ),
+    act: (c) {
+      c.changeLocationId(_changedLocationId);
+    },
+    expect: () => [
+      ForecastState(
+        locationId: _changedLocationId,
+        busy: false,
+      ),
+      ForecastState(
+        locationId: _changedLocationId,
+        busy: true,
+      ),
+      ForecastState(
+        locationId: _changedLocationId,
+        forecasts: mockedForecasts,
+      ),
+    ],
+    verify: (c) => verify(
+      () => _service.list(locationId: _changedLocationId),
     ).called(1),
   );
 }

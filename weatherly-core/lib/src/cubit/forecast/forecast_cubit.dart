@@ -47,6 +47,7 @@ class ForecastCubit extends Cubit<ForecastState> {
     }
   }
 
+  /// Changes the location id and updates the cubit state.
   void changeLocationId(int locationId) {
     emit(
       state.copyWith(
